@@ -29,8 +29,7 @@ Cette application est une API backend développée avec Nest.js. Elle inclut des
 1. Clonez le repository :
 
     ```bash
-    git clone https://github.com/votre-utilisateur/votre-repository.git
-    cd votre-repository
+    git clone https://github.com/brahmiamine/backend-nestjs.git
     ```
 
 2. Installez les dépendances :
@@ -152,7 +151,11 @@ docker-compose down
 
 ## Endpoints
 
-Voici une liste des principaux endpoints de l'API :
+La documentation de l'API a été générée avec Bruno API Client. Pour consulter la documentation :
+
+Ouvrez Bruno API Client.
+Importez le fichier de collection Bruno fourni dans le projet (par exemple, bruno-collection.json).
+Consultez les différentes requêtes et leurs détails.
 
 ### Authentification
 
