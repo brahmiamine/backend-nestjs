@@ -1,0 +1,22 @@
+meta {
+  name: updateUser
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{base_url}}/api/v1/users/me
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwic3ViIjoxLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE1NTkwOTcsImV4cCI6MTcyMTU2MjY5N30.pWnFwBR1MFQ_x4C_Gl8bXpPLNhfS_tZ5jZhZms0Wxr0
+}
+
+body:json {
+  {
+    "password":"Test@12345",
+    "name": "Test Userr2"
+  }
+}

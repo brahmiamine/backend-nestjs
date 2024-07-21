@@ -1,0 +1,23 @@
+meta {
+  name: getAllUsers
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/api/v1/users?role=admin&sortBy=pseudonyme&order=desc&page=1&limit=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  role: admin
+  sortBy: pseudonyme
+  order: desc
+  page: 1
+  limit: 10
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwic3ViIjoxNywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxNTE3NDY2LCJleHAiOjE3MjE1MjEwNjZ9.QjORPAKq9Q0g_fJMU08TEnDgm9MdX9PpHa7dTcKfIbk
+}
