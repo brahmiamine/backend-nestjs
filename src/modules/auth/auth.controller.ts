@@ -67,7 +67,6 @@ export class AuthController {
         },
       );
       if (error instanceof ConflictException) {
-        //throw new BadRequestException(error.message);
         throw error;
       }
       throw new BadRequestException(

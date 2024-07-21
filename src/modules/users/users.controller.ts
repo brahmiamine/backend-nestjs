@@ -28,8 +28,8 @@ import { Logger } from 'winston';
 /**
  * UsersController gère les opérations CRUD pour les utilisateurs.
  */
-@ApiTags('users') // Groupe de routes
-@ApiBearerAuth('access-token') // Indique que toutes les routes nécessitent une authentification Bearer
+@ApiTags('users') 
+@ApiBearerAuth('access-token') 
 @Controller('users')
 export class UsersController {
   constructor(

@@ -21,7 +21,7 @@ describe('AppController (e2e)', () => {
     await app.init();
 
     userRepository = moduleFixture.get<Repository<User>>(getRepositoryToken(User));
-  }, 20000); // Augmentation du délai d'attente pour beforeAll
+  }, 20000); 
 
   afterAll(async () => {
     await app.close();
@@ -52,7 +52,7 @@ describe('AppController (e2e)', () => {
       token = response.body.data.access_token;
       const user = await userRepository.findOne({ where: { pseudonyme: userDto.pseudonyme } });
       userId = user.id;
-    }, 20000); // Augmentation du délai d'attente pour le test
+    }, 20000); 
 
     it('/auth/login (POST) should login an existing user', async () => {
       const response = await request(app.getHttpServer())
@@ -85,7 +85,6 @@ describe('AppController (e2e)', () => {
     }, 10000);
 
     it('/users (GET) should return a list of users for admin', async () => {
-      // First, update the user's role to admin
       await userRepository.update(userId, { role: 'admin' });
 
       const response = await request(app.getHttpServer())

@@ -96,7 +96,7 @@ export class AuthService {
         stack: error.stack,
       });
       if (error instanceof ConflictException) {
-        throw error; // Rejeter l'exception pour qu'elle soit capturée par le contrôleur
+        throw error; 
       }
       throw new BadRequestException(
         "Erreur lors de l'inscription",

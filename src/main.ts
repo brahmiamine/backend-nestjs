@@ -16,7 +16,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new ResponseInterceptor());
   app.useGlobalFilters(new HttpExceptionFilter());
   app.setGlobalPrefix('api/v1');
-  // Configurer Swagger
+
   const config = new DocumentBuilder()
     .setTitle('API Documentation')
     .setDescription('API description')
@@ -27,7 +27,7 @@ async function bootstrap() {
         scheme: 'bearer',
         bearerFormat: 'JWT',
       },
-      'access-token', // Nom du schéma de sécurité
+      'access-token',
     )
     .build();
   const document = SwaggerModule.createDocument(app, config);
